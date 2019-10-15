@@ -42,7 +42,7 @@ Now handle inserting the appropriate scale word between those chunks.
 So `1234567890` should yield `'1 billion 234 million 567 thousand 890'`
 
 The program must also report any values that are out of range.  It's
-fine to stop at "trillion".
+fine to stop at "quintillion".
 
 ## Step 4
 
@@ -70,38 +70,20 @@ every exercise will require you to raise an exception, but for those that do, th
 a message.
 
 To raise a message with an exception, just write it as an argument to the exception type. For example, instead of
-`raise Exception`, you should write:
+`throw DomainError`, you should write:
 
-```python
-raise Exception("Meaningful message indicating the source of the error")
+```julia
+throw DomainError("Meaningful message indicating the source of the error")
 ```
-
-## Running the tests
-
-To run the tests, run the appropriate command below ([why they are different](https://github.com/pytest-dev/pytest/issues/1629#issue-161422224)):
-
-- Python 2.7: `py.test say_test.py`
-- Python 3.4+: `pytest say_test.py`
-
-Alternatively, you can tell Python to run the pytest module (allowing the same command to be used regardless of Python version):
-`python -m pytest say_test.py`
-
-### Common `pytest` options
-
-- `-v` : enable verbose output
-- `-x` : stop running tests on first failure
-- `--ff` : run failures from previous test before running other test cases
-
-For other options, see `python -m pytest -h`
-
+ 
 ## Submitting Exercises
 
-Note that, when trying to submit an exercise, make sure the solution is in the `$EXERCISM_WORKSPACE/python/say` directory.
+Note that, when trying to submit an exercise, make sure the solution is in the `$EXERCISM_WORKSPACE/julia/say` directory.
 
 You can find your Exercism workspace by running `exercism debug` and looking for the line that starts with `Workspace`.
 
 For more detailed information about running tests, code style and linting,
-please see [Running the Tests](http://exercism.io/tracks/python/tests).
+please see [Running the Tests](http://exercism.io/tracks/julia/tests).
 
 ## Source
 
