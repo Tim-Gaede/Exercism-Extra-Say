@@ -1,6 +1,6 @@
 using Test
 
-include("solution_example.jl")
+include("say.jl")
 
 
 # Tests adapted from `problem-specifications//canonical-data.json` @ v1.2.0
